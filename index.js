@@ -1179,43 +1179,244 @@
 // eagle.sleep();
 // eagle.fly();
 
-class Animal {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+// class Animal {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   move(speed) {
+//     console.log(`the ${this.name} moves at speed of ${speed}kmp`);
+//   }
+// }
+
+// class Rabbit extends Animal {
+//   constructor(name, age, runSpeed) {
+//     super(name, age); // parent constructor
+//     this.runSpeed = runSpeed;
+//   }
+
+//   run() {
+//     console.log(`This ${this.name} can run`);
+//     super.move(this.runSpeed);
+//   }
+// }
+
+// class Fish extends Animal {
+//   constructor(name, age, swimSpeed) {
+//     super(name, age); // parent constructor
+//     this.swimSpeed = swimSpeed;
+//   }
+
+//   swim() {
+//     console.log(`This ${this.name} can swim`);
+//     super.move(this.swimSpeed);
+//   }
+// }
+
+// class Eagle extends Animal {
+//   constructor(name, age, flySpeed) {
+//     super(name, age); // parent constructor
+//     this.flySpeed = flySpeed;
+//   }
+
+//   fly() {
+//     console.log(`This ${this.name} can fly`);
+//     super.move(this.flySpeed);
+//   }
+// }
+
+// const rabbit = new Rabbit("rabbit", 2, 25);
+// const fish = new Fish("fish", 1, 10);
+// const eagle = new Eagle("indian eagle", 3, 50);
+
+// rabbit.run();
+// fish.swim();
+// eagle.fly();
+
+
+// class Rectangle {
+
+//   constructor(width, height) {
+//      this.width = width;
+//      this.height = height;
+//   }
+
+//   set width(newWidth) {
+//      if(newWidth > 0) {
+//       this._width = newWidth;
+//      } else {
+//       console.error("Widht must be +ve number")
+//      }
+//   }
+//   set height(newHeight) {
+//      if(newHeight > 0) {
+//       this._height = newHeight;
+//      } else {
+//       console.error("Height must be +ve number")
+//      }
+//   }
+
+ 
+//    get width() {
+//     return this._width;
+//    }
+//    get height() {
+//     return this._height;
+//    }
+
+//    get area() {
+      
+//    }
+
+
+// }
+
+// const rectangle = new Rectangle(5, 11);
+
+
+// console.log(rectangle.height);
+// console.log(rectangle.width);
+
+// class Person{
+//   constructor(firstName, lastName, age) {
+//     this.firstName = firstName;
+//     this.lastName  = lastName;
+//     this.age = age;
+//   }
+
+
+//    set firstName(newFirstName) {
+//       if(typeof newFirstName === "string" && newFirstName.length > 0) {
+//         this._firstName = newFirstName;
+//       } else {
+//         console.error("FirstName must be a non emepty string");
+//       }
+//    }
+//    set lastName(newLastName) {
+//       if(typeof newLastName === "string" && newLastName.length > 0) {
+//         this._lastName = newLastName;
+//       } else {
+//         console.error("LastName must be a non emepty string");
+//       }
+//    }
+
+//    set age(newAge) {
+//     if(typeof newAge === "number" && newAge >= 0) {
+//       this._age = newAge;
+//     } else {
+//        console.error("age must be a non  -ve number");
+//     }
+//    }
+
+
+//   get firstName() {
+//     return this._firstName;
+//   }
+
+//   get lastName() {
+//     return this._lastName;
+//   }
+
+//   get fullName() {
+//     return this._firstName + " " + this._lastName;
+//   }
+   
+//   get age() {
+//     return this._age;
+//   }
+
+
+// }
+
+
+//  const person = new Person("siva", "kumar", 22);
+
+//  console.log(person.firstName);
+//  console.log(person.lastName);
+//  console.log(person.fullName);
+//  console.log(person.age);
+ 
+
+// swap the values of two variables 
+
+// let a = 1;
+// let b = 2;
+
+// console.log(a);
+// console.log(b);
+
+
+// [a,b] = [b,a];
+
+// console.log(a);
+// console.log(b);
+
+// swap 2 elements in an array 
+
+// const colors = ["red", "green", "black", "white"];
+
+// [colors[0], colors[3]] = [colors[3], colors[0]];
+
+// console.log(colors);
+
+// assign array elements to variable 
+
+// const colors = ["red", "green", "black", "white", "yellow"];
+
+// const [firstColor, secondColor, thirdColor, ...extraColors] = colors;
+
+// console.log(firstColor, secondColor, thirdColor, extraColors);
+
+// Extarct values from object 
+
+// const person1 = {
+//   firstName:"siva",
+//   lastName:"kumar",
+//   age: 22,
+//   job: "JS coder"
+
+// }
+// const person2 = {
+//   firstName:"ganes",
+//   lastName:"kumar",
+//   age: 21,
+//   job: "unemployed"
+
+// }
+
+
+// const {firstName, lastName, age, job} = person1;
+
+// console.log(firstName);
+// console.log(lastName);
+// console.log(age);
+// console.log(job);
+
+
+
+// destrututre in function parameters 
+
+
+function displayPerson({firstName, lastName, age, job}) {
+   console.log(`name: ${firstName} ${lastName}`);
+   console.log(`age: ${age}`);
+   console.log(`job: ${job}`);
 }
 
-class Rabbit extends Animal {
-  constructor(name, age, runSpeed) {
-    super(name, age); // parent constructor
-    this.runSpeed = runSpeed;
-  }
+const person1 = {
+  firstName:"siva",
+  lastName:"kumar",
+  age: 22,
+  job: "JS coder"
+
+}
+const person2 = {
+  firstName:"ganes",
+  lastName:"kumar",
+  age: 21,
+  job: "unemployed"
+
 }
 
-class Fish extends Animal {
-  constructor(name, age, swimSpeed) {
-    super(name, age); // parent constructor
-    this.swimSpeed = swimSpeed;
-  }
-}
-
-class Eagle extends Animal {
-  constructor(name, age, flySpeed) {
-    super(name, age); // parent constructor
-    this.flySpeed = flySpeed;
-  }
-}
-
-const rabbit = new Rabbit("rabbit", 2, 25);
-const fish = new Fish("fish", 1, 10);
-const eagle = new Eagle("indian eagle", 3, 50);
-
-
-console.log(rabbit.name);
-console.log(rabbit.age);
-console.log(`the rabbit is runing at ${rabbit.runSpeed} kmp`);
-
-
-
-
+displayPerson(person2)

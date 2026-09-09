@@ -446,6 +446,27 @@ static - keyword that defines properties or methods that belong to a class itsel
  super - the parent 
 
 
+ Getters and Setters 
+
+Getters - special methods that makes a property readable
+Setters - special methods that makes a property writable 
+
+validate and modify a value when reading/writing a property 
+
+
+Destructing - extract values from arrays and objects, then asign them to varaible in convient way.
+[] - tp perform array destruting 
+{} - to perform object destruting 
+
+
+
+
+
+
+
+
+
+
 
 
 
